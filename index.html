@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <meta name="theme-color" content="#121212">
+
+    <title>AURA AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <script src="{{ url_for('static', filename='script.js') }}"
+            defer></script>
+
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-header">
+
+                <div>
+                    <h2>AURA AI</h2>
+                    <p>Your Personal AI</p>
+                </div>
+
+                <button id="new-chat-btn" class="new-chat-btn">
+                    + New Chat
+                </button>
+
+            </div>
+
+            <h3 class="history-heading">
+                Your Conversations
+            </h3>
+
+            <div id="chat-list" class="chat-list"></div>
+
+            <div class="sidebar-footer">
+                Local AI Assistant
+            </div>
+
+        </aside>
+
+
+        <!-- Main Chat Area -->
+
+        <main class="main-area">
+
+            <header class="top-header">
+
+                <h2 id="current-chat-title">
+                    New Chat
+                </h2>
+
+                <span class="model-name">
+                    SmolLM2 · Local
+                </span>
+
+            </header>
+
+
+            <!-- Messages -->
+
+            <section id="chat-box" class="chat-box">
+
+                <div class="welcome-message">
+
+                    <h1>Welcome to AURA</h1>
+
+                    <p>How can I help you today Shivangi?</p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Input Area -->
+
+            <footer class="input-area">
+
+                <div class="input-container">
+
+                    <input
+                        type="text"
+                        id="user-input"
+                        placeholder="Message AURA..."
+                        autocomplete="off"
+                    >
+
+                    <button id="send-btn">
+                        Send
+                    </button>
+
+                </div>
+
+                <p class="disclaimer">
+                    AURA runs locally using Ollama and SmolLM2.
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
